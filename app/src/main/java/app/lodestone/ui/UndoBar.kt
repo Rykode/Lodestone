@@ -21,7 +21,7 @@ import kotlinx.coroutines.delay
 
 /** Moves things to Recently deleted and offers to take it back for a few seconds. */
 object Undo {
-    class Pending(val ids: List<Long>, val text: String, val token: Long)
+    class Pending(val ids: List<Long>, val pinned: List<Long>, val text: String, val token: Long)
 
     var pending by mutableStateOf<Pending?>(null)
         private set
@@ -29,12 +29,14 @@ object Undo {
     fun trash(ids: Collection<Long>) {
         if (ids.isEmpty()) return
         val list = ids.toList()
+        // Trashing un-pins an item, so remember which ones were pinned and pin them again on Undo.
+        val pinned = list.filter { Store.get(it)?.pinned == true }
         Store.trash(list)
-        pending = Pending(list, if (list.size == 1) "Moved to Recently deleted" else "${list.size} items moved to Recently deleted", System.nanoTime())
+        pending = Pending(list, pinned, if (list.size == 1) "Moved to Recently deleted" else "${list.size} items moved to Recently deleted", System.nanoTime())
     }
 
     fun undo() {
-        pending?.let { Store.restore(it.ids) }
+        pending?.let { Store.restore(it.ids); if (it.pinned.isNotEmpty()) Store.setPinned(it.pinned, true) }
         pending = null
     }
 

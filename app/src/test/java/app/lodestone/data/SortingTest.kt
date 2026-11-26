@@ -20,6 +20,11 @@ class SortingTest {
     @Test fun oldestFirstKeepsPinnedOnTop() = assertEquals(listOf(3L, 1L, 2L, 4L), ids(Sorting.OLDEST))
     @Test fun titleIgnoresCase() = assertEquals(listOf(3L, 2L, 4L, 1L), ids(Sorting.TITLE))
     @Test fun siteGroupsByDomainThenTitle() = assertEquals(listOf(3L, 2L, 4L, 1L), ids(Sorting.SITE))
+    @Test fun untitledItemsSortLastByTitle() {
+        val rest = Sorting.apply(listOf(item(1, "", 1), item(2, "zebra", 2)), Sorting.TITLE).map { it.id }
+        assertEquals(listOf(2L, 1L), rest)
+    }
+
     @Test fun itemsWithoutASiteSortLastInSiteOrder() {
         val rest = Sorting.apply(listOf(item(1, "x", 1), item(2, "y", 2, "z.com")), Sorting.SITE).map { it.id }
         assertEquals(listOf(2L, 1L), rest)

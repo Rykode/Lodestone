@@ -19,7 +19,7 @@ Not built yet: reading handwriting, links between notes, summaries written by an
 
 ## Privacy
 
-Lodestone has no server and no analytics. The only network use is fetching the page of a link you saved or imported, straight from that site, and loading a post when you tap play on it. Read [PRIVACY.md](PRIVACY.md).
+Lodestone has no server and no analytics. It goes online only to fetch the page of a link you saved or imported, to ask the link's platform (for example YouTube, X, Bluesky, Vimeo, Instagram) for the post's title and picture, and to play a post when you tap it. There is no Lodestone server in between. Read [PRIVACY.md](PRIVACY.md).
 
 ## Install
 

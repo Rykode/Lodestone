@@ -5,8 +5,12 @@
 # Things the F-Droid reviewers may ask about:
 #  - compileSdk is 37.1. If their build server has no such platform, lower compileSdk in app/build.gradle.kts.
 #  - Tesseract4Android comes prebuilt from JitPack (Apache-2.0, source on GitHub). eng.traineddata is a data file in assets.
-#  - YouTube / Instagram posts play inside the app only when tapped, so reviewers may want the NonFreeNet anti-feature.
-#    It is left out here; add "AntiFeatures: NonFreeNet" if they ask.
+#  - Lodestone asks YouTube, Instagram, X and similar platforms for post details and plays their embeds, so it is
+#    declared below with NonFreeNet.
+#  - Tesseract4Android bundles native libraries (Tesseract, Leptonica, libjpeg, libpng). F-Droid may ask for them to be built from source.
+AntiFeatures:
+  NonFreeNet:
+    en-US: Fetches post details from, and plays posts of, third-party platforms such as YouTube and Instagram.
 Categories:
   - Reading
   - Writing

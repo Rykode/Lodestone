@@ -58,7 +58,7 @@ fun SettingsScreen() {
             )
             SettingRow("About Lodestone", "Version ${BuildConfig.VERSION_NAME} · privacy · licences", Icons.Rounded.Info, c.hi, { Nav.push(Route.About) })
             Text(
-                "No account. No cloud. Lodestone goes online only to fetch pages for links you saved or imported.",
+                "No account. No cloud. Lodestone goes online only to fetch pages and post details for links you saved or imported.",
                 style = MaterialTheme.typography.bodySmall, color = c.sec, modifier = Modifier.padding(horizontal = 12.dp, vertical = 10.dp),
             )
         }
@@ -221,11 +221,11 @@ fun AboutScreen() {
             }
             Text(
                 "Lodestone keeps links, images, videos, files and notes on this phone. There is no account, no cloud, no analytics and no ads. " +
-                    "The only network use is fetching a saved link's page: its title, text and preview image. Requests go straight to that site, and to the site hosting its preview image, with no Lodestone server in between. Lodestone also retries links that haven't loaded yet when it starts.",
+                    "The only network use is fetching a saved link's page (its title, text and preview image) and, for posts on platforms such as X, Bluesky, Vimeo, Instagram and Threads, asking that platform for the post's details. Requests go straight to those sites with no Lodestone server in between. Lodestone also retries links that haven't loaded yet when it starts.",
                 style = MaterialTheme.typography.bodyLarge, color = c.tx,
             )
             Text(
-                "Text inside pictures and PDFs is read by Tesseract, an open-source reader that runs on this phone and sends nothing anywhere. Posts you play inside Lodestone (YouTube, Instagram and others) load from that platform only when you tap play. Your library is stored in the app's private storage. Uninstalling the app deletes it, so use Back up regularly and keep the file somewhere safe.",
+                "Text inside pictures and PDFs is read by Tesseract, an open-source reader that runs on this phone and sends nothing anywhere. Posts you play inside Lodestone (YouTube, Instagram and others) start playing from that platform only when you tap play. Your library is stored in the app's private storage. Uninstalling the app deletes it, so use Back up regularly and keep the file somewhere safe.",
                 style = MaterialTheme.typography.bodyLarge, color = c.tx,
             )
             SectionTitle("Not built yet")

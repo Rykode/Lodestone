@@ -116,7 +116,7 @@ fun LodestoneApp() {
                     enter = androidx.compose.animation.slideInVertically(spring(dampingRatio = 0.8f, stiffness = 500f)) { it } + fadeIn(),
                     exit = androidx.compose.animation.slideOutVertically { it } + fadeOut(),
                 ) {
-                    UndoBar(Modifier.windowInsetsPadding(WindowInsets.navigationBars).padding(bottom = if (toolbarShown) 104.dp else 16.dp))
+                    UndoBar(Modifier.windowInsetsPadding(WindowInsets.navigationBars).padding(bottom = if (toolbarShown || Nav.selecting || Nav.current is Route.Resurface || Nav.current is Route.Space) 104.dp else 16.dp))
                 }
                 if (Nav.showCapture || Store.pending != null) CaptureSheet()
             }

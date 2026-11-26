@@ -9,7 +9,7 @@ object Sorting {
 
     val names = listOf("Newest first", "Oldest first", "Title A to Z", "Site A to Z")
 
-    private fun keyTitle(i: Item) = i.title.trim().lowercase().ifEmpty { i.note.trim().lowercase() }
+    private fun keyTitle(i: Item) = i.title.trim().lowercase().ifEmpty { i.note.trim().lowercase() }.ifEmpty { "\uffff" }
     private fun keySite(i: Item) = i.domain.trim().lowercase().ifEmpty { "~" }
 
     fun apply(items: List<Item>, mode: Int): List<Item> {

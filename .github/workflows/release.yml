@@ -21,9 +21,12 @@ jobs:
         with:
           distribution: temurin
           java-version: 21
-      - uses: android-actions/setup-android@v3
-      - name: Install the SDK platform and build tools
-        run: sdkmanager "platforms;android-37.1" "build-tools;36.0.0"
+      # The GitHub runner already has the Android SDK. Accept its licences and add the platform this app compiles against.
+      - name: Install the SDK platform
+        run: |
+          yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null || true
+          "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "platforms;android-37.1"
+      - run: chmod +x gradlew
       - uses: gradle/actions/setup-gradle@v4
       - name: Prepare signing
         env:
