@@ -5,6 +5,22 @@ No account, no cloud, no analytics, no ads. Inspired by mymind, designed in Mate
 
 Android 8.0 or newer (API 26). Licensed under the [MIT licence](LICENSE).
 
+## Screenshots
+
+All screenshots use invented sample data: the titles, sites and pictures were made up for this page.
+
+| Library | List view | An item |
+|:--:|:--:|:--:|
+| <img src="docs/screenshots/01-library.png" width="240" alt="The Library as cards, with a pinned recipe link and a note"> | <img src="docs/screenshots/02-list.png" width="240" alt="The Library as a compact list"> | <img src="docs/screenshots/03-item.png" width="240" alt="A saved link with its preview, tags and readable copy"> |
+
+| Spaces | Search | App icons |
+|:--:|:--:|:--:|
+| <img src="docs/screenshots/04-spaces.png" width="240" alt="Spaces named Recipes, Trips and Reading"> | <img src="docs/screenshots/05-search.png" width="240" alt="Search results for the word garden, across a note, a link and a picture"> | <img src="docs/screenshots/06-app-icon.png" width="240" alt="Six cat app icons to choose from"> |
+
+| Appearance | OLED black | Light |
+|:--:|:--:|:--:|
+| <img src="docs/screenshots/07-appearance.png" width="240" alt="Appearance settings with OLED black, colour schemes, text size and corners"> | <img src="docs/screenshots/08-oled-library.png" width="240" alt="The Library on a pure black background"> | <img src="docs/screenshots/09-light-library.png" width="240" alt="The Library in light mode"> |
+
 ## What it does
 
 - **Local and offline.** Everything lives in the app's private storage on your phone.
