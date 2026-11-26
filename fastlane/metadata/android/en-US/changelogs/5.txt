@@ -1,0 +1,6 @@
+First public release.
+Save links, pictures, videos, files and notes, from the app or any share sheet.
+Search page text and the words inside pictures and PDFs, read on your phone.
+Spaces, Smart Spaces, sorting, list view, Undo after delete.
+Back up and restore, import bookmarks or a mymind export.
+Light, dark and OLED black themes, more appearance settings, six app icons.

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Direct Share: shows "Save to Lodestone" at the top of the system share sheet. -->
+    <share-target android:targetClass="app.lodestone.ShareReceiverActivity">
+        <data android:mimeType="text/plain" />
+        <data android:mimeType="image/*" />
+        <data android:mimeType="video/*" />
+        <data android:mimeType="application/*" />
+        <category android:name="app.lodestone.category.SAVE" />
+    </share-target>
+</shortcuts>

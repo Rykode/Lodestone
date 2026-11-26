@@ -1,0 +1,40 @@
+# DRAFT build recipe for the F-Droid data repository (https://gitlab.com/fdroid/fdroiddata).
+# Copy this file to metadata/rykode.lodestone.yml in a fork of fdroiddata and open a merge request,
+# once the GitHub repository is public and the v1.0.0 tag exists. Nothing here has been run by F-Droid.
+#
+# Things the F-Droid reviewers may ask about:
+#  - compileSdk is 37.1. If their build server has no such platform, lower compileSdk in app/build.gradle.kts.
+#  - Tesseract4Android comes prebuilt from JitPack (Apache-2.0, source on GitHub). eng.traineddata is a data file in assets.
+#  - YouTube / Instagram posts play inside the app only when tapped, so reviewers may want the NonFreeNet anti-feature.
+#    It is left out here; add "AntiFeatures: NonFreeNet" if they ask.
+Categories:
+  - Reading
+  - Writing
+License: MIT
+AuthorName: Rykode
+WebSite: https://github.com/Rykode/Lodestone
+SourceCode: https://github.com/Rykode/Lodestone
+IssueTracker: https://github.com/Rykode/Lodestone/issues
+Changelog: https://github.com/Rykode/Lodestone/blob/HEAD/CHANGELOG.md
+
+AutoName: Lodestone
+
+RepoType: git
+Repo: https://github.com/Rykode/Lodestone.git
+
+Builds:
+  - versionName: 1.0.0
+    versionCode: 5
+    commit: v1.0.0
+    subdir: app
+    sudo:
+      - apt-get update || apt-get update
+      - apt-get install -y openjdk-21-jdk-headless
+      - update-alternatives --auto java
+    gradle:
+      - yes
+
+AutoUpdateMode: Version
+UpdateCheckMode: Tags
+CurrentVersion: 1.0.0
+CurrentVersionCode: 5

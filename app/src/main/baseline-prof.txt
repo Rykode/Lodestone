@@ -1,0 +1,3 @@
+# Startup profile: tells Android to precompile the app's own code on install, so it opens faster.
+HSPLapp/lodestone/**;->**(**)**
+Lapp/lodestone/**;

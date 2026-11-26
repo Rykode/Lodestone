@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Lodestone" parent="@android:style/Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/lode_window</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <!-- Android's own splash screen: the logo on the app colour, held until the library is read so nothing flashes. -->
+    <style name="Theme.Lodestone.Splash" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/lode_icon_bg</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+        <item name="postSplashScreenTheme">@style/Theme.Lodestone</item>
+    </style>
+
+    <!-- The invisible share target: no window, no animation, so sharing feels instant. -->
+    <style name="Theme.Lodestone.Share" parent="@android:style/Theme.Translucent.NoTitleBar">
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowNoDisplay">false</item>
+    </style>
+</resources>

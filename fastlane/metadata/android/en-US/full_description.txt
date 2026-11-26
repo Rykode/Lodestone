@@ -1,0 +1,18 @@
+Lodestone is a calm place to keep the things you want to find again: links, pictures, videos, files and notes. Everything stays on your phone. There is no account, no cloud, no analytics and no ads.
+
+<b>Save from anywhere</b>
+Share a link, text, photo, video or file from any app and choose Save to Lodestone. It keeps it and you stay where you were. Saving works offline; the title, preview picture and a readable copy arrive when you are online.
+
+<b>Find it later</b>
+Search words, tags, the text of saved pages, and even the words inside pictures and PDFs. That text is read on your phone, and nothing is uploaded.
+
+<b>Keep it tidy</b>
+Spaces, Smart Spaces that fill themselves from rules, tags and pinning. Sort by newest, oldest, title or site, and view cards or a compact list. Undo a delete, and find deleted things for 30 days in Recently deleted.
+
+<b>Your data is yours</b>
+Back up everything to one file and restore it any time. Bring in browser bookmarks, or your mymind export.
+
+<b>Make it yours</b>
+Light, dark or OLED black, six colour schemes, text size, corner roundness, grid columns, motion and haptic settings, and a choice of six cat app icons.
+
+Works on Android 8.0 and newer. Open source under the MIT licence.
